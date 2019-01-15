@@ -5,7 +5,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <h1>Weclome To our Dashboard</h1>;
+        <h1 className="alert alert-warning">Weclome To our Dashboard</h1>;
         <Projectitem />
       </div>
     );
