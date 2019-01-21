@@ -38,7 +38,7 @@ class Projectitem extends Component {
                     <i className="fa fa-edit pr-1"> Update Project Info</i>
                   </li>
                 </Link>
-                <a href="">
+                <a href="#">
                   <li
                     className="list-group-item delete"
                     onClick={this.onDeleteClick.bind(
