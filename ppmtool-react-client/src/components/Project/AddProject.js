@@ -150,6 +150,7 @@ AddProject.propTypes = {
   errors: PropTypes.object.isRequired
 };
 
+//map state to props
 const mapStateToProps = state => ({
   errors: state.errors
 });
