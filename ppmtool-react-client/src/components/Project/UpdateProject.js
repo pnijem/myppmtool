@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { getProject, createProject } from "./../../actions/projectActions";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { classnames } from "classnames";
+import classnames from "classnames";
 
 class UpdateProject extends Component {
   constructor() {
@@ -107,7 +107,7 @@ class UpdateProject extends Component {
                     onChange={this.onChange}
                     disabled
                   />
-                  {errors.projectName && (
+                  {errors.projectIdentifier && (
                     <div className="invalid-feedback">
                       {errors.projectIdentifier}
                     </div>
@@ -124,7 +124,7 @@ class UpdateProject extends Component {
                     value={this.state.description}
                     onChange={this.onChange}
                   />
-                  {errors.projectName && (
+                  {errors.description && (
                     <div className="invalid-feedback">{errors.description}</div>
                   )}
                 </div>
