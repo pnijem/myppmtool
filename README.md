@@ -7,7 +7,7 @@
   * State management with Redux
   * Consume Spring boot API with Axios
   * RESTful API with Spring Boot 2
-  * vSecure the API using Spring Security and JWTs
+  * Secure the API using Spring Security and JWTs
 
 ==============================================================================
 
