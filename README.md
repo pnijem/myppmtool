@@ -9,10 +9,10 @@
   ### RESTful API with Spring Boot 2
   ### Secure the API using Spring Security and JWTs
 
-=====================================================================================================
+==============================================================================
 
 ## Notes:
-  ### The project is done using ES6 syntax.
+  ### The project has been done using ES6 syntax.
   ### IDEs used - IntelliJ, Visual Studio Code
   ### The project will be deployed to Heroku.
 
