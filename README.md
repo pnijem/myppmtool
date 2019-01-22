@@ -2,7 +2,7 @@
 ## Project Portfolio Management Tool
 
 ## Stack:
-  * ***Spring Boot 2
+  * *** Spring Boot 2
   * ***Front-end with ReactJS
   * ***State management with Redux
   * ***Consume Spring boot API with Axios
