@@ -3,7 +3,7 @@
 
 ## Stack:
   * Spring Boot 2
-  * Front-end with ReactJS
+  * ReactJS, Redux, HTML5, CSS3 & Bootstrap4
   * State management with Redux
   * Consume Spring boot API with Axios
   * RESTful API with Spring Boot 2
