@@ -1,44 +1,63 @@
 package com.pnijem.ppmtool.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
-@Entity
-public class Backlog {
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Integer PTSequence = 0;
-    private String projectIdentifier;
+@Entity public class Backlog {
 
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
 
-    //OneToOne with project
-    //OneToMany with ProjectTasks
+	private Integer PTSequence = 0;
 
-    public Backlog(){
+	private String projectIdentifier;
 
-    }
+	//OneToOne with project
+	//one Project has one backlog. One Backlog has one Project
+	@OneToOne(fetch = FetchType.EAGER) @JoinColumn(name = "project_id", nullable = false) @JsonIgnore //prevent unwanted recursion
+	private Project project;
 
-    public Long getId() {
-        return id;
-    }
+	//OneToMany with ProjectTasks
+	List<ProjectTask> projectTasks = new ArrayList<>();
 
-    public Integer getPTSequence() {
-        return PTSequence;
-    }
+	public Backlog() {
 
-    public void setPTSequence(Integer PTSequence) {
-        this.PTSequence = PTSequence;
-    }
+	}
 
-    public String getProjectIdentifier() {
-        return projectIdentifier;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setProjectIdentifier(String projectIdentifier) {
-        this.projectIdentifier = projectIdentifier;
-    }
+	public Integer getPTSequence() {
+		return PTSequence;
+	}
+
+	public void setPTSequence(Integer PTSequence) {
+		this.PTSequence = PTSequence;
+	}
+
+	public String getProjectIdentifier() {
+		return projectIdentifier;
+	}
+
+	public void setProjectIdentifier(String projectIdentifier) {
+		this.projectIdentifier = projectIdentifier;
+	}
+
+	public Project getProject() {
+		return project;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
 }
